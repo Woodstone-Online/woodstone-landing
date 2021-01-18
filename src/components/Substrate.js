@@ -1,5 +1,5 @@
 import '../styles/Substrate.scss';
 
-const Substrate = () => <div class="widget-substrate"></div>;
+const Substrate = () => <div className="widget-substrate"></div>;
 
 export default Substrate;

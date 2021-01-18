@@ -1,0 +1,1 @@
+export const APP_ENDPOINT = 'https://app.woodstone.online';

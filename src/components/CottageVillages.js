@@ -5,96 +5,96 @@ import drop from '../images/drop.svg';
 import fire from '../images/fire.svg';
 
 const CottageVillages = () => (
-    <div class="cv-section">
-        <div class="wrapper">
-            <h2 class="section-title">Ваш дом в лучших<br></br>коттеджных поселках</h2>
-            <div class="section-content">
-                <div class="container">
-                    <div class="content-wrapper">
-                        <div class="cv-list">
-                            <div class="table-header">
-                                <div class="table-header-block cottage-villages">
-                                    <span class="column-title">Поселок</span>
+    <div className="cv-section">
+        <div className="wrapper">
+            <h2 className="section-title">Ваш дом в лучших<br></br>коттеджных поселках</h2>
+            <div className="section-content">
+                <div className="container">
+                    <div className="content-wrapper">
+                        <div className="cv-list">
+                            <div className="table-header">
+                                <div className="table-header-block cottage-villages">
+                                    <span className="column-title">Поселок</span>
                                 </div>
-                                <div class="table-header-block remoteness">
-                                    <span class="column-title">Удаленность от города</span>
+                                <div className="table-header-block remoteness">
+                                    <span className="column-title">Удаленность от города</span>
                                 </div>
-                                <div class="table-header-block infrastructure">
-                                    <span class="column-title">Инфраструктура</span>
-                                </div>
-                            </div>
-                            <div class="cv-item">
-                                <div class="cv-text-block">
-                                    <h3 class="cv-title">Лисьи Горки</h3>
-                                    <p class="cv-description">36 км от Екатеринбурга</p>
-                                </div>
-                                <div class="cv-remoteness-block">
-                                    <span class="minutes">36 км</span>
-                                    <span class="area">Тюменский тракт</span>
-                                </div>
-                                <div class="cv-icons-block">
-                                    <img class="cv-icon" src={shield} alt=""></img>
-                                    <img class="cv-icon" src={lightning} alt=""></img>
-                                    <img class="cv-icon" src={drop} alt=""></img>
-                                    <img class="cv-icon" src={fire} alt=""></img>
+                                <div className="table-header-block infrastructure">
+                                    <span className="column-title">Инфраструктура</span>
                                 </div>
                             </div>
-                            <div class="cv-item">
-                                <div class="cv-text-block">
-                                    <h3 class="cv-title">Гагарский ключ</h3>
-                                    <p class="cv-description">42 км от Екатеринбурга</p>
+                            <div className="cv-item">
+                                <div className="cv-text-block">
+                                    <h3 className="cv-title">Лисьи Горки</h3>
+                                    <p className="cv-description">36 км от Екатеринбурга</p>
                                 </div>
-                                <div class="cv-remoteness-block">
-                                    <span class="minutes">42 км</span>
-                                    <span class="area">Полевской тракт</span>
+                                <div className="cv-remoteness-block">
+                                    <span className="minutes">36 км</span>
+                                    <span className="area">Тюменский тракт</span>
                                 </div>
-                                <div class="cv-icons-block">
-                                    <img class="cv-icon" src={shield} alt=""></img>
-                                    <img class="cv-icon" src={lightning} alt=""></img>
-                                    <img class="cv-icon" src={drop} alt=""></img>
-                                </div>
-                            </div>
-                            <div class="cv-item">
-                                <div class="cv-text-block">
-                                    <h3 class="cv-title">Чистые росы 2</h3>
-                                    <p class="cv-description">71 км от Екатеринбурга</p>
-                                </div>
-                                <div class="cv-remoteness-block">
-                                    <span class="minutes">71 км</span>
-                                    <span class="area">Челябинский тракт</span>
-                                </div>
-                                <div class="cv-icons-block">
-                                    <img class="cv-icon" src={shield} alt=""></img>
-                                    <img class="cv-icon" src={lightning} alt=""></img>
+                                <div className="cv-icons-block">
+                                    <img className="cv-icon" src={shield} alt=""></img>
+                                    <img className="cv-icon" src={lightning} alt=""></img>
+                                    <img className="cv-icon" src={drop} alt=""></img>
+                                    <img className="cv-icon" src={fire} alt=""></img>
                                 </div>
                             </div>
-                            <div class="cv-item">
-                                <div class="cv-text-block">
-                                    <h3 class="cv-title">Расторгуевъ</h3>
-                                    <p class="cv-description">55 км от Екатеринбурга</p>
+                            <div className="cv-item">
+                                <div className="cv-text-block">
+                                    <h3 className="cv-title">Гагарский ключ</h3>
+                                    <p className="cv-description">42 км от Екатеринбурга</p>
                                 </div>
-                                <div class="cv-remoteness-block">
-                                    <span class="minutes">55 км</span>
-                                    <span class="area">Тюменский тракт</span>
+                                <div className="cv-remoteness-block">
+                                    <span className="minutes">42 км</span>
+                                    <span className="area">Полевской тракт</span>
                                 </div>
-                                <div class="cv-icons-block">
-                                    <img class="cv-icon" src={shield} alt=""></img>
-                                    <img class="cv-icon" src={lightning} alt=""></img>
-                                    <img class="cv-icon" src={drop} alt=""></img>
-                                    <img class="cv-icon" src={fire} alt=""></img>
+                                <div className="cv-icons-block">
+                                    <img className="cv-icon" src={shield} alt=""></img>
+                                    <img className="cv-icon" src={lightning} alt=""></img>
+                                    <img className="cv-icon" src={drop} alt=""></img>
+                                </div>
+                            </div>
+                            <div className="cv-item">
+                                <div className="cv-text-block">
+                                    <h3 className="cv-title">Чистые росы 2</h3>
+                                    <p className="cv-description">71 км от Екатеринбурга</p>
+                                </div>
+                                <div className="cv-remoteness-block">
+                                    <span className="minutes">71 км</span>
+                                    <span className="area">Челябинский тракт</span>
+                                </div>
+                                <div className="cv-icons-block">
+                                    <img className="cv-icon" src={shield} alt=""></img>
+                                    <img className="cv-icon" src={lightning} alt=""></img>
+                                </div>
+                            </div>
+                            <div className="cv-item">
+                                <div className="cv-text-block">
+                                    <h3 className="cv-title">Расторгуевъ</h3>
+                                    <p className="cv-description">55 км от Екатеринбурга</p>
+                                </div>
+                                <div className="cv-remoteness-block">
+                                    <span className="minutes">55 км</span>
+                                    <span className="area">Тюменский тракт</span>
+                                </div>
+                                <div className="cv-icons-block">
+                                    <img className="cv-icon" src={shield} alt=""></img>
+                                    <img className="cv-icon" src={lightning} alt=""></img>
+                                    <img className="cv-icon" src={drop} alt=""></img>
+                                    <img className="cv-icon" src={fire} alt=""></img>
                                 </div>
                             </div>
                         </div>
-                        <div class="cv-see-more-block">
-                            <a class="cv-see-more-button" href="/cottage-villages">Посмотреть все</a>
-                            <span class="cv-see-more-text">Более 80 поселков</span>
+                        <div className="cv-see-more-block">
+                            <a className="cv-see-more-button" href="/cottage-villages">Посмотреть все</a>
+                            <span className="cv-see-more-text">Более 80 поселков</span>
                         </div>
                     </div>
                 </div>
-                <div class="showcase-house-block">
-                    <div class="image"></div>
-                    <h2 class="title">Посмотрите выставочный дом<br></br>в коттеджном поселке Клевер</h2>
-                    <a class="button" href="#showing">Записаться на просмотр</a>
+                <div className="showcase-house-block">
+                    <div className="image"></div>
+                    <h2 className="title">Посмотрите выставочный дом<br></br>в коттеджном поселке Клевер</h2>
+                    <a className="button" href="#showing">Записаться на просмотр</a>
                 </div>
             </div>
         </div>
