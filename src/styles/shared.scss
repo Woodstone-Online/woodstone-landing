@@ -1,0 +1,27 @@
+@mixin iPhone-X {
+    @media (min-width: 375px) {
+        @content;
+    }
+}
+  
+@mixin iPad {
+    @media (min-width: 767px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin desktop-1060 {
+    @media (min-width: 1060px) {
+        @content;
+    }
+}
+
+$green: #6EBC61;
+$transparent-gray: rgba(196,196,196, 0.3) ;
+$slider-bg-color: #EBEBEB;

@@ -1,0 +1,12 @@
+@import "./shared.scss";
+
+.widget-substrate {
+    height: 309px;
+    background: white;
+    margin-top: -46px;
+    border-radius: 5% 5% 0% 0%;
+
+    @include iPad {
+        display: none;
+    }
+}

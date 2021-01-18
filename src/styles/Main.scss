@@ -1,0 +1,320 @@
+@import "./shared.scss";
+
+.main-section {
+    background: url('../images/bg-mobile.png');
+    background-size: cover;
+    height: 332px;
+    color: white;
+
+    @include iPad {
+        background: url('../images/bg-desktop.png');
+        height: 432px;
+        background-size: cover;
+    }
+
+    @include desktop() {
+        background: url('../images/bg-desktop.png');
+        image-rendering: -webkit-optimize-contrast;
+        height: 607px;
+        background-size: cover;
+    }
+
+    .container {
+        @include iPad {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-areas:
+                "title"
+                "widget"
+                "description";
+        }
+    }
+
+    #title {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 42px;
+        width: 95%;
+        max-width: 295px;
+        padding-top: 37px;
+
+        @include iPad {
+            margin-top: 30px;
+            max-width: 594px;
+            font-size: 32px;
+            line-height: 42px;
+            grid-area: title;
+        }
+
+        @include desktop {
+            margin-top: 85px;
+            font-size: 54px;
+            line-height: 62px;
+        }
+    }
+
+    #description {
+        margin: 0;
+        height: 66px;
+        width: 99%;
+        max-width: 319px;
+        font-family: 'Open Sans';
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 23px;
+        padding-top: 15px;
+
+        @include iPad {
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 26px;
+            grid-area: description;
+        }
+
+        @include desktop {
+            margin-top: 60px;
+            font-size: 16px;
+            max-width: 411px;
+        }
+    }
+
+    .widget {
+        position: relative;
+        margin-top: 57px;
+        background-color: white;
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: 16px;
+        color: black;
+        grid-area: widget;
+
+        @include iPad {
+            height: 101px;
+            margin-top: 40px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @include desktop {
+            margin-top: 65px;
+        }
+    }
+
+    .budget {
+        padding-top: 35px;
+
+        @include iPad {
+            padding-top: 0px;
+            margin-left: 12px;
+            width: 30%;
+            font-size: 14px;
+        }
+
+        @include desktop {
+            width: 26%;
+            padding-top: 0px;
+            margin-left: 2.5%;
+            font-size: 16px;
+        }        
+
+        .budget-texts-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            #budget-text-sum {
+                font-size: 18px;
+
+                @include iPad {
+                    font-size: 16px;
+                }
+
+                @include desktop {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            .slider {
+                width: 100%;
+                margin: 7px 0;
+                background-color: $slider-bg-color;
+                -webkit-appearance: none;
+            }
+    
+            .slider::-webkit-slider-runnable-track {
+                background: $green;
+                border: 0;
+                width: 100%;
+                height: 5px;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+    
+            .slider::-webkit-slider-thumb {
+                margin-top: -7px;
+                width: 19px;
+                height: 19px;
+                background: #ffffff;
+                border: 2px solid $green;
+                border-radius: 100px;
+                cursor: ew-resize;
+                -webkit-appearance: none;
+            }
+        }
+
+        .slider::-moz-range-progress {
+            background-color: $green; 
+        }
+        .slider::-moz-range-track {  
+            background-color: $slider-bg-color;
+        }
+        .slider::-ms-fill-lower {
+            background-color: $green; 
+        }
+        .slider::-ms-fill-upper {  
+            background-color: $slider-bg-color;
+        }
+    }
+
+    .residents {
+        height: 96px;
+        margin-top: 30px;
+        border-top: 1px solid  $transparent-gray;
+        border-bottom: 1px solid  $transparent-gray;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Open Sans';
+
+        @include iPad {
+            margin-top: 0px;
+            height: 100%;
+            width: 32%;
+            border-left: 1px solid $transparent-gray;
+            border-right: 1px solid $transparent-gray;
+        }
+
+        @include desktop {
+            width: 38%;
+            height: 100%;
+            margin-top: 0px;
+            border-left: 1px solid $transparent-gray;
+            border-right: 1px solid $transparent-gray;
+        }
+
+        .residents-title {
+            display: block;
+            margin-top: 18px;
+            font-size: 14px;
+            font-weight: 400;
+
+            @include iPad {
+                margin-top: 0;
+            }
+
+            @include desktop {
+                margin-top: 0;
+                margin-right: 10px;
+                font-size: 16px;
+            }
+        }
+
+        .residents-value {
+            font-size: 16px;
+            font-weight: 600;
+            margin-right: 12px;
+            margin-left: 12px;
+        }
+
+        .residents-buttons-block {
+            margin-top: 11px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include iPad {
+                margin-top: 15px;
+            }
+
+            @include desktop {
+                margin-top: 0;
+            }
+        }
+
+        .residents-adults-block {
+            width: 50%;
+            height: 96px;
+            border-right: 1px solid $transparent-gray;
+            text-align: center;
+
+            @include iPad {
+                border-right: 0;
+                height: auto;
+            }
+
+            @include desktop {
+                border-right: 0;
+                height: 100%;
+                width: 170px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+
+        .residents-children-block {
+            width: 50%;
+            height: 96px;
+            text-align: center;
+
+            @include iPad {
+                border-right: 0;
+                height: auto;
+            }
+
+            @include desktop {
+                height: 100%;
+                width: 145px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+    }
+
+    .start-button {
+        display: block;
+        text-align: center;
+        margin-top: 23px;
+        color: #F8F8F8;
+        width: 100%;
+        background-color: $green;
+        padding: 21px 0 20px 0;
+        font-style: normal;
+        border-radius: 4px;
+        font-weight: 500;
+        line-height: 22px;
+        font-size: 16px;
+
+        @include iPad {
+            margin-top: 0px;
+            margin-right: 14px;
+            width: 30%;
+            font-size: 14px;
+        }
+
+        @include desktop {
+            margin-top: 0px;
+            margin-right: 2.5%;
+            width: 26%;
+            font-size: 14px;
+            padding: 16px 0 17px 0;
+        }
+    }
+}

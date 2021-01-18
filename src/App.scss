@@ -1,0 +1,23 @@
+@import "./styles/shared.scss";
+
+.wrapper {
+  padding: 0 5% 0 5%;
+  max-width: 1332px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+
+  @include desktop {
+      font-size: 28px;
+      line-height: 38px;
+      color: #302F3A;
+  }
+}
+
+.green-text {
+  color: $green;
+}

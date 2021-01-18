@@ -1,0 +1,101 @@
+@import "shared.scss";
+
+.footer {
+    background-color: white;
+
+    .container {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        margin-left: 1%;
+
+        @include iPad {
+            margin-left: 0;
+            display: grid;
+            grid-template-columns: 50%;
+            grid-template-areas:
+                "menu-links menu-links"
+                "text-legal social-icons"
+                "text-approved text-policy";
+        }
+    }
+
+    .menu-links-block {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        justify-content: space-around;
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: #302F3A;
+
+        @include iPad {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            grid-area: menu-links;
+        }
+    }
+
+    .menu-link {
+        margin-bottom: 24px;
+
+        @include iPad {
+            margin-right: 30px;
+        }
+    }
+
+    .social-icons-block {
+        margin-top: 15px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        @include iPad {
+            margin-top: 0;
+            grid-area: social-icons;
+        }
+    }
+
+    .social-icon {
+        display: inline-block;
+        margin-right: 6%;
+
+        @include iPad {
+            margin-right: 20px;
+        }
+    }
+
+    .text {
+        padding-top: 30px;
+        width: 95%;
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 19px;
+        opacity: 0.6;
+
+        @include iPad {
+            font-size: 13px;
+        }
+    }
+
+    .legal {
+        @include iPad {
+            grid-area: text-legal;
+            max-width: 477px;
+        }
+    }
+
+    .approved {
+        @include iPad {
+            grid-area: text-approved;
+        }
+    }
+
+    .policy {
+        @include iPad {
+            grid-area: text-policy;
+        }
+    }
+}

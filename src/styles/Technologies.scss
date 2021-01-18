@@ -1,0 +1,105 @@
+@import "shared.scss";
+
+.technologies-section {
+    margin-top: 32px;
+
+    @include iPad {
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+
+    .container {
+        @include iPad {
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           grid-template-areas:
+               "text-block images-gallery"
+               "switchers images-gallery";
+        }
+    }
+
+    .text-block {
+        @include iPad {
+            grid-area: text-block;
+            align-self: end;
+            justify-self: start;
+            padding-top: 20px;
+        }
+    }
+
+    .description {
+        margin-top: 10px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 21px;
+        opacity: 0.6;
+
+        @include iPad {
+            font-size: 12px;
+            padding-top: 20px;
+            width: 300px;
+        }
+
+        @include desktop {
+            font-size: 15px;
+            padding-top: 20px;
+            width: 400px;
+        }
+    }
+
+    .tech-image {
+        margin-top: 15px;
+        margin-left: -5%;
+        width: 100%;
+
+        @include iPad {
+            margin-top: 0;
+            margin-left: 0;
+            grid-area: images-gallery;
+            justify-self: end;
+            max-width: 661px;
+            max-height: 532px;
+        }
+    }
+
+    .switchers-container {
+        display: flex;
+        justify-content: center;
+
+        @include iPad {
+            grid-area: switchers;
+            justify-content: left;
+            align-self: start;
+            justify-self: start;
+            padding-top: 40px;
+        }
+    }
+
+    .switchers {
+        margin-top: 43px;
+        display: flex;
+        justify-content: space-between;
+        width: 104px;
+        height: 45px;
+
+        @include iPad {
+            margin-top: 0;
+        }
+    }
+
+    .gray-switcher {
+        width: 8px;
+        height: 8px;
+        background: #DCDCDC;
+        border-radius: 16px;
+    }
+
+    .green-switcher {
+        width: 8px;
+        height: 8px;
+        background: $green;
+        border-radius: 16px;
+    }
+}

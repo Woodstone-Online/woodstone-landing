@@ -1,0 +1,60 @@
+@import "./shared.scss";
+
+.services-section {
+    margin-top: 24px;
+
+    @include desktop {
+        margin-top: 50px;
+    }
+
+    .services-list {
+        margin-top: 10px;
+        width: 100%;
+
+        @include iPad {
+            margin-top: 30px;
+            display: grid;
+            grid-gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+        }
+    }
+
+    .services-item {
+        background-color: white;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        margin-bottom: 16px;
+        cursor: pointer;
+
+        @include iPad {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    .service-image {
+        width: 100%;
+    }
+
+    .service-texts-block {
+        padding: 20px 20px;
+
+        @include iPad {
+            padding: 35px 32px;
+        }
+
+        .service-title {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .service-description {
+            margin-top: 8px;
+            font-family: 'Open Sans';
+            font-size: 14px;
+            line-height: 21px;
+            opacity: 0.6;
+        }
+    }
+}
