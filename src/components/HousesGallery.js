@@ -1,51 +1,35 @@
 import '../styles/HousesGallery.scss';
+import ScrollContainer from 'react-indiana-drag-scroll';
+import picture from '../images/gallery-1.png';
 
 const HousesGallery = () => (
     <div className="gallery-section">
-        <div className="houses-gallery">
+        <ScrollContainer className="houses-gallery">
             <div className="gallery-item">
-                <div className="gallery-item-text">
-                    <span>
-                        Дом для семьи из 4х человек в пос. Косулино
-                    </span>
-                </div>
+                <img src={picture} className="picture" alt="" />
             </div>
             <div className="gallery-item">
-                <div className="gallery-item-text">
-                    <span>
-                        Дом для семьи из 4х человек в пос. Косулино
-                    </span>
-                </div>
+                <img src={picture} className="picture" alt="" />
             </div>
             <div className="gallery-item">
-                <div className="gallery-item-text">
-                    <span>
-                        Дом для семьи из 4х человек в пос. Косулино
-                    </span>
-                </div>
+                <img src={picture} className="picture" alt="" />
             </div>
             <div className="gallery-item">
-                <div className="gallery-item-text">
-                    <span>
-                        Дом для семьи из 4х человек в пос. Косулино
-                    </span>
-                </div>
+                <img src={picture} className="picture" alt="" />
             </div>
             <div className="gallery-item">
-                <div className="gallery-item-text">
-                    <span>
-                        Дом для семьи из 4х человек в пос. Косулино
-                    </span>
-                </div>
+                <img src={picture} className="picture" alt="" />
             </div>
             <div className="gallery-item">
-                <div className="gallery-item-text">
-                    <span>
-                        Дом для семьи из 4х человек в пос. Косулино
-                    </span>
-                </div>
+                <img src={picture} className="picture" alt="" />
             </div>
-        </div>
+            <div className="gallery-item">
+                <img src={picture} className="picture" alt="" />
+            </div>
+            <div className="gallery-item">
+                <img src={picture} className="picture" alt="" />
+            </div>
+        </ScrollContainer>
     </div>
 );
 
