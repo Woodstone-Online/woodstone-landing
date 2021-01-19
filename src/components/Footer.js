@@ -9,12 +9,12 @@ const Footer = () => (
         <div className="wrapper">
             <div className="container">
                 <ul className="menu-links-block">
-                    <li className="menu-link">Услуги</li>
-                    <li className="menu-link">Галерея</li>
-                    <li className="menu-link">Технологии</li>
-                    <li className="menu-link">Партнеры</li>
-                    <li className="menu-link">Помощь</li>
-                    <li className="menu-link">Работа офиса</li>
+                    <li className="menu-link"><a href="#services">Услуги</a></li>
+                    <li className="menu-link"><a href="#gallery">Галерея</a></li>
+                    <li className="menu-link"><a href="#technologies">Технологии</a></li>
+                    <li className="menu-link"><a href="#partners">Партнеры</a></li>
+                    <li className="menu-link"><a href="#help">Помощь</a></li>
+                    <li className="menu-link"><a href="#office">Работа офиса</a></li>
                 </ul>
                 <div className="social-icons-block">
                     <a href="https://www.facebook.com/woodstoneekb/" className="social-icon" target="_blank" rel="noopener noreferrer"><img src={facebook} alt=""></img></a>

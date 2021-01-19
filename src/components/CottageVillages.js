@@ -94,7 +94,7 @@ const CottageVillages = () => (
                 <div className="showcase-house-block">
                     <div className="image"></div>
                     <h2 className="title">Посмотрите выставочный дом<br></br>в коттеджном поселке Клевер</h2>
-                    <a className="button" href="#showing">Записаться на просмотр</a>
+                    <a className="button" href="#showhouse">Записаться на просмотр</a>
                 </div>
             </div>
         </div>

@@ -64,7 +64,7 @@ const Main = () => {
                                 <span className="residents-title">Взрослых</span>
                                 <div className="residents-buttons-block">
                                     <img
-                                        className="minus"
+                                        className="residents-button minus"
                                         src={minus}
                                         alt=""
                                         onClick={() => changeAdultsValue(adults - 1)}
@@ -72,7 +72,7 @@ const Main = () => {
                                     </img>
                                     <span className="residents-value">{adults}</span>
                                     <img
-                                        className="plus"
+                                        className="residents-button plus"
                                         src={plus}
                                         alt=""
                                         onClick={() => changeAdultsValue(adults + 1)}
@@ -84,7 +84,7 @@ const Main = () => {
                                 <span className="residents-title">Детей</span>
                                 <div className="residents-buttons-block">
                                     <img
-                                        className="minus"
+                                        className="residents-button minus"
                                         src={minus}
                                         alt=""
                                         onClick={() => changeChildrenValue(children - 1)}
@@ -92,7 +92,7 @@ const Main = () => {
                                     </img>
                                     <span className="residents-value">{children}</span>
                                     <img
-                                        className="plus"
+                                        className="residents-button plus"
                                         src={plus}
                                         alt=""
                                         onClick={() => changeChildrenValue(children + 1)}

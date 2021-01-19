@@ -41,7 +41,9 @@ const Header = () => (
                         </a>
                     </div>
                     <div className="header-right-group">
-                        <img id="phone-icon" src={phone} alt=""></img>
+                        <a href="tel:+74955488594">
+                            <img id="phone-icon" src={phone} alt=""></img>
+                        </a>
                     </div>
                 </div>
             </div>

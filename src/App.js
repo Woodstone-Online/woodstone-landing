@@ -11,6 +11,8 @@ import Technologies from './components/Technologies';
 import Partners from './components/Partners';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
+import CallbackModal from './components/CallbackModal';
+import ShowhouseModal from './components/ShowhouseModal';
 
 function App() {
     return (
@@ -26,6 +28,8 @@ function App() {
             <Partners />
             <Contacts />
             <Footer />
+            <CallbackModal />
+            <ShowhouseModal />
         </Fragment>
     );
 }

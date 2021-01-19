@@ -6,6 +6,7 @@ import tealtech from '../images/tealtech.png';
 
 const Partners = () => (
     <div className="partners-section">
+        <a id="partners" href="#partners"> </a>
         <div className="wrapper">
             <div className="container">
                 <div className="text-block">

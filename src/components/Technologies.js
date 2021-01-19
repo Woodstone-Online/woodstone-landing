@@ -3,6 +3,7 @@ import tech from '../images/tech.png';
 
 const Technologies = () => (
     <div className="technologies-section">
+        <a id="technologies" href="#technologies"> </a>
         <div className="wrapper">
             <div className="container">
                 <div className="text-block">

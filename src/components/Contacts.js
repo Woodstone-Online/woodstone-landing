@@ -12,7 +12,7 @@ const Contacts = () => (
                     <a className="callback-button" href="#callback">Перезвоните мне</a>
                 </div>
                 <form className="subscribe-form" action="">
-                    <input id="email-input" type="text" placeholder="E-mail"></input>
+                    <input id="email-input" type="email" placeholder="E-mail"></input>
                     <button id="subscribe-button" type="submit">Получить предложение</button>
                 </form>
             </div>
