@@ -16,7 +16,7 @@ const Modal = () => {
 
     return (
         <div className="modal" id="showhouse">
-            <div class="modal-content">
+            <div className="modal-content">
                 <div className="container-large">
                     <div className="wrapper">
                         <div className="header-block">

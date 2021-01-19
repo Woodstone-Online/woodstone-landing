@@ -49,11 +49,13 @@
         }
     }
 
-    .tech-image {
+    .slider {
         margin-top: 15px;
-        margin-left: -5%;
+        background-color: white;
         width: 100%;
-
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+        border-radius: 18px 18px 0 0;
+        
         @include iPad {
             margin-top: 0;
             margin-left: 0;
@@ -61,6 +63,39 @@
             justify-self: end;
             max-width: 661px;
             max-height: 532px;
+        }
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 400px;
+
+        @include desktop-1060 {
+            height: 500px;
+        }
+    }
+
+    .swiper-wrapper {
+        margin-top: 30px;
+        width: 286px;
+
+        @include desktop-1060 {
+            height: 370px;
+        }
+    }
+
+    .swiper-slide {
+        width: 286px;
+        height: 373px;
+        text-align: center;
+        background-image: url('../images/tech-1.png');
+        background-size: contain;
+        background-position: bottom;
+        image-rendering: -webkit-optimize-contrast;
+
+        @include desktop-1060 {
+            width: 370px;
+            height: 480px;
         }
     }
 
@@ -81,25 +116,36 @@
         margin-top: 43px;
         display: flex;
         justify-content: space-between;
-        width: 104px;
-        height: 45px;
+        margin-bottom: 51px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
         @include iPad {
             margin-top: 0;
+            margin-bottom: 0;
         }
     }
 
-    .gray-switcher {
+    .switchers:focus {
+        outline: none;
+    }
+
+    .swiper-pagination-bullet {
         width: 8px;
         height: 8px;
         background: #DCDCDC;
         border-radius: 16px;
+        margin-right: 20px;
+        opacity: 1;
+        cursor: pointer;
     }
 
-    .green-switcher {
+    .swiper-pagination-bullet-active {
         width: 8px;
         height: 8px;
         background: $green;
         border-radius: 16px;
+        margin-right: 20px;
+        opacity: 1;
+        cursor: pointer;
     }
 }
