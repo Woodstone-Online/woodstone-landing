@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { CONFIG } from '../config';
 
-const instance = axios.create({ baseURL: CONFIG.apiUrl, timeout: 1000 });
+const instance = axios.create({ baseURL: CONFIG.apiUrl });
 
 instance.interceptors.response.use(null, error => {
     const isValidationError = error.response && error.response.data && error.response.data.details;

@@ -1,6 +1,6 @@
 import http from './httpService';
 
-const endpoint = '/user';
+const endpoint = '/users';
 
 export function createUser(data) {
     return http.post(endpoint, { ...data, project: null });
