@@ -55,17 +55,55 @@
                 max-width: 370px;
             }
 
-            .burger-menu {
+            .burger-menu-open {
+                cursor: pointer;
+
                 @include iPad {
                     display: none;
                 }
             }
     
-            .burger-menu > div {
+            .burger-menu-open > div {
                 width: 22px;
                 height: 2px;
                 background-color: black;
                 margin: 6px 0;
+            }
+
+            .burger-menu-close {
+                cursor: pointer;
+                width: 23px;
+                height: 23px;
+                position: relative;
+
+                @include iPad {
+                    display: none;
+                }
+            }
+
+            .burger-menu-close > div {
+                width: 23px;
+                height: 2px;
+                background-color: black;
+                margin-top: -2px;
+                position: absolute;
+                top: 50%;
+            }
+
+            .burger-menu-close > div:nth-child(1) {
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            .burger-menu-close > div:nth-child(2) {
+                visibility: hidden;
+            }
+
+            .burger-menu-close > div:nth-child(3) {
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                transform: rotate(-45deg);
             }
     
             #logo {
