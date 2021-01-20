@@ -1,6 +1,6 @@
 @import "shared.scss";
 
-.modal {
+.showhouse-modal {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -241,7 +241,7 @@
     }
 }
 
-.modal:target {
+.showhouse-modal:target {
     visibility: visible;
     opacity: 1;
     z-index: 2;

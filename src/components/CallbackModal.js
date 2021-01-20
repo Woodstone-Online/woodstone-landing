@@ -25,7 +25,7 @@ const Modal = () => {
     }
 
     return (
-        <div className="modal" id="callback">
+        <div className="callback-modal" id="callback">
             <div className="modal-content">
                 <div className="container">
                     <div className="main">

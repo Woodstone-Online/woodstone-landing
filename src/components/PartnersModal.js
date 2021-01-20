@@ -36,7 +36,7 @@ const Modal = () => {
     }
 
     return (
-        <div className="modal" id="partnership">
+        <div className="partners-modal" id="partnership">
             <div className="modal-content">
                 <div className="container">
                     <div className="main">

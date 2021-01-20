@@ -25,7 +25,7 @@ const Modal = () => {
     }
 
     return (
-        <div className="modal" id="showhouse">
+        <div className="showhouse-modal" id="showhouse">
             <div className="modal-content">
                 <div className="container">
                     <div className="main">
@@ -63,8 +63,8 @@ const Modal = () => {
                         </div>
                         <div className="texts-block">
                             <span className="decoration-text">Выберите удобное время</span>
-                            <span className="decoration-text">Посмотрите дом вживую</span>
-                            <span className="decoration-text">Примерьте будущую жизнь</span>
+                            <span className="decoration-text">Посмотрите дом</span>
+                            <span className="decoration-text">Ощутите загородную жизнь</span>
                         </div>
                     </div>
                 </div>

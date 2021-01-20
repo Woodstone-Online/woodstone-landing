@@ -3,7 +3,7 @@ import close from '../images/close-icon.svg';
 
 const Modal = () => {
     return (
-        <div className="modal" id="office">
+        <div className="office-modal" id="office">
             <div className="modal-content">
                 <div className="container">
                     <div className="main">

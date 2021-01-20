@@ -1,6 +1,6 @@
 @import "shared.scss";
 
-.modal {
+.partners-modal {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -255,7 +255,7 @@
     }
 }
 
-.modal:target {
+.partners-modal:target {
     visibility: visible;
     opacity: 1;
     z-index: 2;
