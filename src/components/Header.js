@@ -57,12 +57,12 @@ const Header = () => (
                             <span className="information-title">Екатеринбург</span>
                         </div>
                         <div className="partners">
-                            <img className="information-icon" src={briefcase} alt=""></img>
-                            <span className="information-title">Партнерам</span>
+                                <img className="information-icon" src={briefcase} alt=""></img>
+                                <a href="#partnership"><span className="information-title">Партнерам</span></a>
                         </div>
                         <div className="office">
                             <img className="information-icon" src={briefcase} alt=""></img>
-                            <span className="information-title">Работа офиса</span>
+                            <a href="#office"><span className="information-title">Работа офиса</span></a>
                         </div>
                     </div>
                     <div className="contacts">

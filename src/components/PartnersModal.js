@@ -1,14 +1,17 @@
-import '../styles/ShowhouseModal.scss';
+import '../styles/PartnersModal.scss';
 import { useState } from 'react';
 import * as userService from '../services/userService';
 import { InterestType } from '../constants';
 import close from '../images/close-icon.svg';
 import success from '../images/success.svg';
+import woodstone from '../images/woodstone.svg';
 
 const Modal = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [phone, setPhone] = useState('');
     const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [text, setText] = useState('');
 
     const handlePhoneChange = (event) => {
         setPhone(event.target.value);
@@ -18,14 +21,22 @@ const Modal = () => {
         setName(event.target.value);
     };
 
+    const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+    };
+
+    const handleTextChange = (event) => {
+        setText(event.target.value);
+    };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
-        await userService.createUser({ phone, name, preferences: userService.makePreferences(InterestType.Showcase) });
+        await userService.createUser({ phone, name, email, preferences: userService.makePreferences(InterestType.Partnership) });
         setIsSubmitted(!isSubmitted);
     }
 
     return (
-        <div className="modal" id="showhouse">
+        <div className="modal" id="partnership">
             <div className="modal-content">
                 <div className="container">
                     <div className="main">
@@ -36,12 +47,14 @@ const Modal = () => {
                                     <a href="/#" className="modal-close-icon"><img src={close} alt="" /></a>
                                 </div>
                                 <div className="texts-block">
-                                    <h3 className="modal-title">Записаться на просмотр</h3>
-                                    <p className="modal-text">Посмотрите место, где в ближайшем будущем сможете жить вы сами</p>
+                                    <h3 className="modal-title">Партнерство</h3>
+                                    <p className="modal-text">Наш менеджер перезвонит вам  в течении 14 минут и ответит на возникшие вопросы</p>
                                 </div>
                                 <form className="modal-form" onSubmit={handleSubmit}>
                                     <input className="modal-form-input" type="tel" placeholder="+7" value={phone} required onChange={handlePhoneChange} />
                                     <input className="modal-form-input" type="text" placeholder="Ваше имя" value={name} required onChange={handleNameChange} />
+                                    <input className="modal-form-input" type="email" placeholder="E-mail" value={email} required onChange={handleEmailChange} />
+                                    <textarea className="modal-form-textarea" placeholder="Текст сообщения" value={text} onChange={handleTextChange} />
                                     <button className="modal-form-button" type="submit">Оставить заявку</button>
                                 </form>
                             </div>
@@ -61,10 +74,8 @@ const Modal = () => {
                         <div className="header-block">
                             <a href="/#" className="modal-close-icon"><img src={close} alt="" /></a>
                         </div>
-                        <div className="texts-block">
-                            <span className="decoration-text">Выберите удобное время</span>
-                            <span className="decoration-text">Посмотрите дом вживую</span>
-                            <span className="decoration-text">Примерьте будущую жизнь</span>
+                        <div className="logo-block">
+                            <img className="logo" src={woodstone} alt="" />
                         </div>
                     </div>
                 </div>

@@ -3,6 +3,7 @@ import shield from '../images/shield.svg';
 import lightning from '../images/lightning.svg';
 import drop from '../images/drop.svg';
 import fire from '../images/fire.svg';
+import { APP_ENDPOINT } from '../constants';
 
 const CottageVillages = () => (
     <div className="cv-section">
@@ -86,7 +87,7 @@ const CottageVillages = () => (
                             </div>
                         </div>
                         <div className="cv-see-more-block">
-                            <a className="cv-see-more-button" href="/cottage-villages">Посмотреть все</a>
+                            <a className="cv-see-more-button" href={APP_ENDPOINT}>Посмотреть все</a>
                             <span className="cv-see-more-text">Более 80 поселков</span>
                         </div>
                     </div>

@@ -1,0 +1,158 @@
+@import "shared.scss";
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 300ms;
+    visibility: hidden;
+    opacity: 0;
+
+    .modal-content {
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .container {
+        width: 100%;
+        position: absolute; 
+        bottom: 0px;
+        background-color: white;
+        border-radius: 20px 20px 0 0;
+
+        @include desktop {
+            width: 932px;
+            height: 523px;
+            border-radius: 12px;
+            left: 0; 
+            right: 0; 
+            top: 0;
+            bottom: 0;
+            margin-left: auto; 
+            margin-right: auto; 
+            margin-top: auto;
+            margin-bottom: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .main {
+        padding-left: 5%;
+        padding-right: 5%;
+
+        @include desktop {
+            width: 435px;
+            padding-left: 0;
+            padding-right: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-content {
+            @include desktop {
+                width: 254px;
+            }
+        }
+
+        .header-block {
+            display: flex;
+            justify-content: flex-end;
+        }
+    
+        .modal-close-icon {
+            margin-top: 5%;
+
+            @include desktop {
+                display: none;
+            }
+        }
+    
+        .texts-block {
+            margin-top: -5%;
+            width: 80%;
+        }
+    
+        .modal-title {
+            font-family: 'Montserrat';
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 26px;
+            color: #3F3E48;
+
+            @include desktop {
+                font-weight: 700;
+                font-size: 34px;
+                line-height: 42px;
+                color: #302F3A;
+                width: 374px;
+            }
+        }
+
+        .modal-subtitle {
+            font-family: 'Open Sans';
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 20px;
+            color: #515159;
+        }
+    
+        .modal-text {
+            margin-top: 10px;
+            font-family: 'Open Sans';
+            font-size: 14px;
+            line-height: 22px;
+            opacity: 0.6;
+            max-width: 300px;
+        }
+
+        .address-block {
+            margin-top: 40px;
+        }
+
+        .hours-block {
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+            @include desktop {
+                margin-top: 60px;
+            }
+        }
+
+        .timetable {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 194px;
+        }
+    }
+
+    .decoration {
+        display: none;
+        height: 523px;
+        width: 497px;
+        background: #F6F7F9;
+        border-radius: 0 12px 12px 0;
+        background-image: url('../images/office.png');
+        background-size: cover;
+
+        @include desktop {
+            display: block;
+        }
+    
+        .modal-close-icon {
+            margin-top: 5%;
+            margin-right: 5%;
+        }
+    }
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+}

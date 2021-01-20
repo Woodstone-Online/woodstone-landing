@@ -13,6 +13,8 @@ import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 import CallbackModal from './components/CallbackModal';
 import ShowhouseModal from './components/ShowhouseModal';
+import PartnersModal from './components/PartnersModal';
+import OfficeModal from './components/OfficeModal';
 
 function App() {
     return (
@@ -30,6 +32,8 @@ function App() {
             <Footer />
             <CallbackModal />
             <ShowhouseModal />
+            <PartnersModal />
+            <OfficeModal />
         </Fragment>
     );
 }
