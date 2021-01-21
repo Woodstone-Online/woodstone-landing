@@ -36,19 +36,18 @@
         font-weight: 500;
         line-height: 42px;
         width: 95%;
-        max-width: 295px;
+        max-width: 320px;
         padding-top: 37px;
 
         @include iPad {
-            margin-top: 30px;
-            max-width: 594px;
             font-size: 32px;
             line-height: 42px;
             grid-area: title;
         }
 
         @include desktop {
-            margin-top: 85px;
+            margin-top: 30px;
+            max-width: 594px;
             font-size: 54px;
             line-height: 62px;
         }

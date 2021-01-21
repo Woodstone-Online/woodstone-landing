@@ -37,7 +37,7 @@ const Contacts = () => {
                 <div className="container">
                     <div className="phone-block">
                         <div className="phonenumber-block">
-                            <span className="phone">+7 (495) 548-85-94</span>
+                            <span className="phone">+7 (991) 777-32-88</span>
                             <span className="online">Сейчас работаем</span>
                         </div>
                         <a className="callback-button" href="#callback">Перезвоните мне</a>

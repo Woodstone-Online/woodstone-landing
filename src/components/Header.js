@@ -21,7 +21,7 @@ const Header = () => {
                 <div className="wrapper">
                     <div className="primary">
                         <div className="header-left-group">
-                            <a className="link" href={isMenuOpen ? '#menu' : '/#'}>
+                            <a className="link" href={isMenuOpen ? '#menu' : '#'}>
                                 <div className={getMenuCSSClass()} onClick={() => setIsMenuOpen(!isMenuOpen)}>
                                     <div></div>
                                     <div></div>
@@ -54,7 +54,7 @@ const Header = () => {
                             </a>
                         </div>
                         <div className="header-right-group">
-                            <a href="tel:+74955488594">
+                            <a href="tel:+79917773288">
                                 <img id="phone-icon" src={phone} alt=""></img>
                             </a>
                         </div>
@@ -86,7 +86,7 @@ const Header = () => {
                         </div>
                         <div className="contacts">
                             <div className="number-and-label">
-                                <span className="number">+7 (495) 548-85-94</span>
+                                <span className="number">+7 (991) 777-32-88</span>
                                 <div className="label"><span className="label-text">Сейчас работаем</span></div>
                             </div>
                             <a className="callback-button" href="#callback">Перезвоните мне</a>

@@ -35,19 +35,21 @@ const Main = () => {
         setChildren(value)
     };
 
+    const makeBudgetText = () => budget < MAX_BUDGET ? `${numberFormatter.format(budget)} ₽` : 'Не важно';
+
     const makeAppLink = () => `${APP_ENDPOINT}?adults=${adults}&children=${children}&budget=${budget}`;
 
     return (
         <div className="main-section">
             <div className="wrapper">
                 <div className="container">
-                    <h1 id="title">Дом вашей мечты<br></br>за 4 месяца</h1>
+                    <h1 id="title">Ваша новая загородная жизнь за 4 месяца</h1>
                     <p id="description">Задайте параметры дома, выберите землю и запланируйте строительство — весь процесс переезда загород в одном месте</p>
                     <div className="widget">
                         <div className="budget">
                             <div className="budget-texts-block">
                                 <span id="budget-text-title">Ваш бюджет</span>
-                                <span id="budget-text-sum">{numberFormatter.format(budget)} ₽</span>
+                                <span id="budget-text-sum">{makeBudgetText()}</span>
                             </div>
                             <input
                                 className="slider"

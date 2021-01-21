@@ -1,8 +1,8 @@
 import '../styles/Partners.scss';
 import sber from '../images/sber.png';
 import ubrir from '../images/ubrir.png';
-import proptech from '../images/proptech.png';
-import tealtech from '../images/tealtech.png';
+import rsb from '../images/rsb.png';
+import nlk from '../images/nlk.png';
 
 const Partners = () => (
     <div className="partners-section">
@@ -16,8 +16,8 @@ const Partners = () => (
                 <div className="logos-block">
                     <div className="logo"><img className="logo-image" src={sber} alt=""></img></div>
                     <div className="logo"><img className="logo-image" src={ubrir} alt=""></img></div>
-                    <div className="logo"><img className="logo-image" src={proptech} alt=""></img></div>
-                    <div className="logo"><img className="logo-image" src={tealtech} alt=""></img></div>
+                    <div className="logo"><img className="logo-image" src={rsb} alt=""></img></div>
+                    <div className="logo"><img className="logo-image" src={nlk} alt=""></img></div>
                 </div>
             </div>
         </div>

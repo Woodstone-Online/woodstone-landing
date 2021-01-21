@@ -1,0 +1,41 @@
+.temp-container {
+    font-family: Helvetica, sans-serif;
+    height: 100vh;
+}
+
+.temp-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.temp-container {
+    margin: auto;
+    width: 80%;
+    max-width: 1024px;
+}
+
+.temp-container img {
+    padding-bottom: 100px;
+    max-width: 100%;
+}
+
+.temp-container h1 {
+    color: #c8c8c8;
+    text-align: center;
+    font-size: 1.6rem;
+    width: 80%;
+    max-width: 800px;
+    font-weight: lighter;
+}
+
+@media (max-width: 1024px) {
+    .temp-container {
+        font-size: 12px;
+    }
+
+    .temp-container h1 {
+        font-weight: normal;
+    }
+}

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/anchor-has-content */
 import '../styles/CallbackModal.scss';
 import { useState } from 'react';
 import * as userService from '../services/userService';
@@ -31,7 +33,7 @@ const Modal = () => {
     let main = (
         <div className="main-content">
             <div className="header-block">
-                <a href="/#" className="modal-close-icon"><img src={close} alt="" /></a>
+                <a href="#" className="modal-close-icon"><img src={close} alt="" /></a>
             </div>
             <div className="texts-block">
                 <h3 className="modal-title">Перезвоните мне</h3>
@@ -49,12 +51,12 @@ const Modal = () => {
         main = (
             <div className="main-success">
                 <div className="header-block">
-                    <a href="/#" className="modal-close-icon"><img src={close} alt="" /></a>
+                    <a href="#" className="modal-close-icon"><img src={close} alt="" /></a>
                 </div>
                 <img className="success-icon" src={success} alt="" />
                 <h3 className="modal-title">Заявка принята</h3>
                 <p className="modal-text">Мы свяжемся с вами в течении 14 минут</p>
-                <a href="/#" className="model-return-button">Вернуться на страницу</a>
+                <a href="#" className="model-return-button">Вернуться на страницу</a>
             </div>
         )
     }
@@ -72,7 +74,7 @@ const Modal = () => {
                     </div>
                     <div className="decoration">
                         <div className="header-block">
-                            <a href="/#" className="modal-close-icon"><img src={close} alt="" /></a>
+                            <a href="#" className="modal-close-icon"><img src={close} alt="" /></a>
                         </div>
                         <div className="texts-block">
                             <span className="decoration-text">Ответим на ваши вопросы</span>
@@ -81,6 +83,7 @@ const Modal = () => {
                         </div>
                     </div>
                 </div>
+                <a className="close-on-bg" href="#" />
             </div>
         </div>
     );

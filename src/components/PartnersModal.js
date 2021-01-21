@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/anchor-has-content */
 import '../styles/PartnersModal.scss';
 import { useState } from 'react';
 import * as userService from '../services/userService';
@@ -42,11 +44,12 @@ const Modal = () => {
     let main = (
         <div className="main-content">
             <div className="header-block">
-                <a href="/#" className="modal-close-icon"><img src={close} alt="" /></a>
+                <a href="#" className="modal-close-icon"><img src={close} alt="" /></a>
             </div>
             <div className="texts-block">
                 <h3 className="modal-title">Партнерство</h3>
-                <p className="modal-text">Наш менеджер перезвонит вам  в течении 14 минут и ответит на возникшие вопросы</p>
+                {/* <p className="modal-text">Наш менеджер перезвонит вам  в течении 14 минут и ответит на возникшие вопросы</p> */}
+                <p className="modal-text">Приглашаем к сотрудничеству инвесторов, строителей, владельцев коттеджных поселков, риэлторов</p>
             </div>
             <form className="modal-form" onSubmit={handleSubmit}>
                 <input className="modal-form-input" type="tel" placeholder="+7" value={phone} required onChange={handlePhoneChange} />
@@ -62,12 +65,12 @@ const Modal = () => {
         main = (
             <div className="main-success">
                 <div className="header-block">
-                    <a href="/#" className="modal-close-icon"><img src={close} alt="" /></a>
+                    <a href="#" className="modal-close-icon"><img src={close} alt="" /></a>
                 </div>
                 <img className="success-icon" src={success} alt="" />
                 <h3 className="modal-title">Заявка принята</h3>
                 <p className="modal-text">Мы свяжемся с вами в течении 14 минут</p>
-                <a href="/#" className="model-return-button">Вернуться на страницу</a>
+                <a href="#" className="model-return-button">Вернуться на страницу</a>
             </div>
         );
     }
@@ -85,13 +88,14 @@ const Modal = () => {
                     </div>
                     <div className="decoration">
                         <div className="header-block">
-                            <a href="/#" className="modal-close-icon"><img src={close} alt="" /></a>
+                            <a href="#" className="modal-close-icon"><img src={close} alt="" /></a>
                         </div>
                         <div className="logo-block">
                             <img className="logo" src={woodstone} alt="" />
                         </div>
                     </div>
                 </div>
+                <a className="close-on-bg" href="#" />
             </div>
         </div>
     );
