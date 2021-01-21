@@ -218,6 +218,31 @@
                 }
             }
 
+            .location-title {
+                margin-right: .8vw;
+            }
+
+            .regions-dropdown-close {
+                display: none;
+                margin-right: 2.1vw;
+
+                @include desktop {
+                    display: inline;
+                }
+            }
+
+            .regions-dropdown-open {
+                display: none;
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                transform: rotate(180deg);
+                margin-right: 2.1vw;
+
+                @include desktop {
+                    display: inline;
+                }
+            }
+
             .information-link {
                 height: 100%;
             }
@@ -229,6 +254,7 @@
                 height: 100%;
                 border-left: 1px solid  $transparent-gray;
                 border-right: 1px solid  $transparent-gray;
+                cursor: pointer;
             }
     
             .partners {

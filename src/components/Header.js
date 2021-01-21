@@ -3,13 +3,17 @@ import '../styles/Header.scss';
 import logo from '../images/logo.svg';
 import phone from '../images/phone.svg';
 import pin from '../images/map-pin.svg';
+import dropdown from '../images/dropdown.svg';
 import briefcase from '../images/briefcase.svg';
 import DropDownMenu from './common/DropDownMenu';
+import DropDownRegions from './common/DropDownRegions';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isRegionsBlockOpen, setIsRegionsBlockOpen] = useState(false);
     
     const getMenuCSSClass = () => isMenuOpen ? 'burger-menu-close' : 'burger-menu-open';
+    const getRegionsCSSClass = () => isRegionsBlockOpen ? 'regions-dropdown-close' : 'regions-dropdown-open';
 
     return (
         <div className="header-section">
@@ -57,14 +61,15 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <DropDownMenu isOpen={isMenuOpen} />
+            <DropDownMenu />
             <div className="secondary-container">
                 <div className="wrapper">
                     <div className="secondary">
                         <div className="information">
-                            <div className="location">
+                            <div className="location" onClick={() => setIsRegionsBlockOpen(!isRegionsBlockOpen)}>
                                 <img className="information-icon" src={pin} alt=""></img>
-                                <span className="information-title">Екатеринбург</span>
+                                <span className="information-title location-title">Екатеринбург</span>
+                                <img className={getRegionsCSSClass()} src={dropdown} alt=""></img>
                             </div>
                             <a className="information-link" href="#partnership">
                                 <div className="partners">
@@ -87,8 +92,10 @@ const Header = () => {
                             <a className="callback-button" href="#callback">Перезвоните мне</a>
                         </div>
                     </div>
+                    <DropDownRegions isOpen={isRegionsBlockOpen} />
                 </div>
             </div>
+            
         </div>
     )
 };

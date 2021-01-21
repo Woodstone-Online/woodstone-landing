@@ -7,7 +7,7 @@ import vk from '../../images/vk.svg';
 import instagram from '../../images/instagram.svg';
 import youtube from '../../images/youtube.svg';
 
-export const DropDownMenu = ({ isOpen }) => {
+export const DropDownMenu = () => {
     return (
             <div id="menu" className="drop-down-menu">
                 <div className="container">
