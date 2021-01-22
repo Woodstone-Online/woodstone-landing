@@ -1,7 +1,7 @@
 @import "./styles/shared.scss";
 
 .wrapper {
-  padding: 0 5% 0 5%;
+  padding: 0 calc(min(5%, 80px)) 0 calc(min(5%, 80px));
   max-width: 1332px;
   margin: 0 auto;
 }
