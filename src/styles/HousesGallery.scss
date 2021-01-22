@@ -24,11 +24,11 @@
 
     .picture {
         width: 265px;
-        height: 265px;
+        height: 187px;
 
         @include iPad {
             width: 330px;
-            height: 330px;
+            height: 233px;
         }
     }
 }
