@@ -11,7 +11,7 @@ import Spinner from './common/Spinner';
 const Modal = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [phone, setPhone] = useState('');
+    const [phone, setPhone] = useState('+7');
     const [name, setName] = useState('');
 
     const handlePhoneChange = (event) => {
