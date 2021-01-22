@@ -23,7 +23,7 @@ const Footer = () => (
                     <a href="https://youtu.be/-PvLnOFiFLU" className="social-icon" target="_blank" rel="noopener noreferrer"><img src={youtube} alt=""></img></a>
                 </div>
                 <p className="text legal">Общество с ограниченной ответственностью «Вудстоун»<br></br><br></br>Екатеринбург, 620000, ул. Малышева, 51, офис 2404, ОГРН 1206600000353 ИНН 6679130610</p>
-                <p className="text approved">Аккредитованный партнер Дом.рф</p>
+                <p className="text approved">© 2021 Woodstone Online</p>
                 <p className="text policy">Использование сайта означает согласие с <a href="https://core.woodstone.online/static/privacy_policy.pdf" target="_blank" rel="noopener noreferrer"><span className="green-text">пользовательским соглашением</span></a></p>
             </div>
         </div>
