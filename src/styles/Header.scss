@@ -175,16 +175,16 @@
         padding-top: 13px;
         font-family: 'Open Sans';
         height: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         @include iPad {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             padding-top: 0;
         }
 
         .information {
-            display: none;
+            display: block;
             font-family: 'Open Sans';
             font-weight: 600;
             font-size: 12px;
@@ -193,6 +193,14 @@
             max-width: 486px;
             height: 100%;
 
+            a {
+                display: none;
+
+                @include iPad {
+                    display: inline;
+                }
+            }
+
             @include iPad {
                 display: flex;
                 justify-content: space-between;
@@ -200,7 +208,9 @@
             }
 
             .information-icon {
-                margin-left: 1.1vw;
+                @include iPad {
+                    margin-left: 1.1vw;
+                }
 
                 @include desktop {
                     margin-left: 2.1vw;
@@ -219,7 +229,17 @@
             }
 
             .location-title {
-                margin-right: .8vw;
+                margin-left: 2vw;
+                font-size: 14px;
+
+                @include iPad {
+                    margin-left: .5vw;
+                    font-size: inherit;
+                }
+
+                @include desktop {
+                    margin-right: .8vw;
+                }
             }
 
             .regions-dropdown-close {
@@ -252,9 +272,12 @@
                 justify-content: left;
                 align-items: center;
                 height: 100%;
-                border-left: 1px solid  $transparent-gray;
-                border-right: 1px solid  $transparent-gray;
                 cursor: pointer;
+
+                @include iPad {
+                    border-left: 1px solid  $transparent-gray;
+                    border-right: 1px solid  $transparent-gray;
+                }
             }
     
             .partners {
@@ -286,68 +309,72 @@
             @include desktop {
                 max-width: 455px;
             }
-        }
 
-        .number-and-label {
-            display: flex;
-            justify-content: left;
-            align-items: center;
-        }
+            .number-and-label {
+                display: none;
 
-        .number {
-            font-weight: 600;
-            font-size: 16px;
-        }
-
-        .label {
-            visibility: hidden;
-            width: 5px;
-            height: 5px;
-            border-radius: 5px;
-            margin-left: 4px;
-            background-color: $green;
-
-            @include iPhone-X {
-                visibility: visible;
+                @include iPad {
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                }
             }
-
-            @include desktop {
-                display: block;
-                font-family: 'Open Sans';
-                font-weight: 400;
-                font-size: 10px;
-                line-height: 14px;
-                border-radius: 10px;
-                padding: 2px 7px 2px 7px;
-                width: 102px;
-                height: 18px;
-                margin-left: 10px;
-                color: white;
+    
+            .number {
+                font-weight: 600;
+                font-size: 16px;
             }
-        }
-
-        .label-text {
-            display: none;
-
-            @include desktop {
-                display: inline;
+    
+            .label {
+                visibility: hidden;
+                width: 5px;
+                height: 5px;
+                border-radius: 5px;
+                margin-left: 4px;
+                background-color: $green;
+    
+                @include iPhone-X {
+                    visibility: visible;
+                }
+    
+                @include desktop {
+                    display: block;
+                    font-family: 'Open Sans';
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 14px;
+                    border-radius: 10px;
+                    padding: 2px 7px 2px 7px;
+                    width: 102px;
+                    height: 18px;
+                    margin-left: 10px;
+                    color: white;
+                }
             }
-        }
-
-        .callback-button {
-            display: inline-block;
-            color: #626364;
-            background-color: #F0F0F0;
-            text-align: center;
-            width: 138px;
-            padding: 9px 0 9px 0;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 12px;
-
-            @include desktop {
-                width: 158px;
-                height: 34px;
+    
+            .label-text {
+                display: none;
+    
+                @include desktop {
+                    display: inline;
+                }
+            }
+    
+            .callback-button {
+                display: inline-block;
+                color: #626364;
+                background-color: #F0F0F0;
+                text-align: center;
+                width: 138px;
+                padding: 9px 0 9px 0;
+                border-radius: 4px;
+                font-weight: 600;
+                font-size: 12px;
+    
+                @include desktop {
+                    width: 158px;
+                    height: 34px;
+                }
             }
         }
     }
