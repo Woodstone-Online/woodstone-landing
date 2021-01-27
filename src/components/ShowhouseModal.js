@@ -7,6 +7,8 @@ import { InterestType } from '../constants';
 import close from '../images/close-icon.svg';
 import success from '../images/success.svg';
 import Spinner from './common/Spinner';
+import * as analytics from '../services/analyticsService';
+import { EventAction, EventCategory } from '../services/analyticsService';
 
 const Modal = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -28,6 +30,7 @@ const Modal = () => {
         await userService.createUser({ phone, name, preferences: userService.makePreferences(InterestType.Showcase) });
         setIsSubmitted(!isSubmitted);
         setIsSubmitting(false);
+        analytics.sendEvent(EventCategory.Conversion, EventAction.lead);
     };
 
     let main = (

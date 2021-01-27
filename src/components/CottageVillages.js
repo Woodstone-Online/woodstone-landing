@@ -4,6 +4,8 @@ import lightning from '../images/lightning.svg';
 import drop from '../images/drop.svg';
 import fire from '../images/fire.svg';
 import { APP_ENDPOINT } from '../constants';
+import * as analytics from '../services/analyticsService';
+import { EventAction, EventCategory } from '../services/analyticsService';
 
 const CottageVillages = () => (
     <div className="cv-section">
@@ -87,7 +89,7 @@ const CottageVillages = () => (
                             </div>
                         </div>
                         <div className="cv-see-more-block">
-                            <a className="cv-see-more-button" href={APP_ENDPOINT}>Посмотреть все</a>
+                            <a className="cv-see-more-button" href={APP_ENDPOINT} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.viewCottageVillages)}>Посмотреть все</a>
                             <span className="cv-see-more-text">Более 80 поселков</span>
                         </div>
                     </div>
@@ -95,7 +97,7 @@ const CottageVillages = () => (
                 <div className="showcase-house-block">
                     <div className="image"></div>
                     <h2 className="title">Посмотрите выставочный дом<br></br>в коттеджном поселке Клевер</h2>
-                    <a className="button" href="#showhouse">Записаться на просмотр</a>
+                    <a className="button" href="#showhouse" onClick={() => analytics.sendEvent(EventCategory.LeadButton, EventAction.showcase)}>Записаться на просмотр</a>
                 </div>
             </div>
         </div>

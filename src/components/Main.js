@@ -4,6 +4,8 @@ import minus from '../images/minus.svg';
 import plus from '../images/plus.svg';
 import { numberFormatter } from '../utils/numbers';
 import { APP_ENDPOINT } from '../constants';
+import * as analytics from '../services/analyticsService';
+import { EventAction, EventCategory } from '../services/analyticsService';
 
 const MIN_BUDGET = 2000000;
 const MAX_BUDGET = 10000000;
@@ -103,7 +105,7 @@ const Main = () => {
                                 </div>
                             </div>
                         </div>
-                        <a className="start-button" href={makeAppLink()}>Начать загородную жизнь</a>
+                        <a className="start-button" href={makeAppLink()} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.getStarted)}>Начать загородную жизнь</a>
                     </div>
                 </div>
             </div>

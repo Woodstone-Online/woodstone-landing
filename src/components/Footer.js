@@ -3,6 +3,8 @@ import facebook from '../images/facebook.svg';
 import vk from '../images/vk.svg';
 import instagram from '../images/instagram.svg';
 import youtube from '../images/youtube.svg';
+import * as analytics from '../services/analyticsService';
+import { EventAction, EventCategory } from '../services/analyticsService';
 
 const Footer = () => (
     <div className="footer">
@@ -17,10 +19,10 @@ const Footer = () => (
                     <li className="menu-link"><a href="#office">Работа офиса</a></li>
                 </ul>
                 <div className="social-icons-block">
-                    <a href="https://www.facebook.com/woodstoneekb/" className="social-icon" target="_blank" rel="noopener noreferrer"><img src={facebook} alt=""></img></a>
-                    <a href="https://www.facebook.com/woodstoneekb/" className="social-icon" target="_blank" rel="noopener noreferrer"><img src={vk} alt=""></img></a>
-                    <a href="https://www.instagram.com/woodstone_ekb/" className="social-icon" target="_blank" rel="noopener noreferrer"><img src={instagram} alt=""></img></a>
-                    <a href="https://youtu.be/-PvLnOFiFLU" className="social-icon" target="_blank" rel="noopener noreferrer"><img src={youtube} alt=""></img></a>
+                    <a href="https://www.facebook.com/woodstoneekb/" className="social-icon" target="_blank" rel="noopener noreferrer" onClick={() => analytics.sendEvent(EventCategory.SocialButton, EventAction.facebook)}><img src={facebook} alt=""></img></a>
+                    <a href="https://www.facebook.com/woodstoneekb/" className="social-icon" target="_blank" rel="noopener noreferrer" onClick={() => analytics.sendEvent(EventCategory.SocialButton, EventAction.vk)}><img src={vk} alt=""></img></a>
+                    <a href="https://www.instagram.com/woodstone_ekb/" className="social-icon" target="_blank" rel="noopener noreferrer" onClick={() => analytics.sendEvent(EventCategory.SocialButton, EventAction.instagram)}><img src={instagram} alt=""></img></a>
+                    <a href="https://youtu.be/-PvLnOFiFLU" className="social-icon" target="_blank" rel="noopener noreferrer" onClick={() => analytics.sendEvent(EventCategory.SocialButton, EventAction.youtube)}><img src={youtube} alt=""></img></a>
                 </div>
                 <p className="text legal">Общество с ограниченной ответственностью «Вудстоун»<br></br><br></br>Екатеринбург, 620000, ул. Малышева, 51, офис 2404, ОГРН 1206600000353 ИНН 6679130610</p>
                 <p className="text approved">© 2021 Woodstone Online</p>

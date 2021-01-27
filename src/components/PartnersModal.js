@@ -8,6 +8,8 @@ import close from '../images/close-icon.svg';
 import success from '../images/success.svg';
 import woodstone from '../images/woodstone.svg';
 import Spinner from './common/Spinner';
+import * as analytics from '../services/analyticsService';
+import { EventAction, EventCategory } from '../services/analyticsService';
 
 const Modal = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -39,6 +41,7 @@ const Modal = () => {
         await userService.createUser({ phone, name, email, preferences: { ...userService.makePreferences(InterestType.Partnership), comment: { value: text } } });
         setIsSubmitting(false);
         setIsSubmitted(!isSubmitted);
+        analytics.sendEvent(EventCategory.Conversion, EventAction.lead);
     }
 
     let main = (

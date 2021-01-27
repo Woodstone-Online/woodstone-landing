@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { InterestType } from '../constants';
 import * as userService from '../services/userService';
 import Spinner from './common/Spinner';
+import * as analytics from '../services/analyticsService';
+import { EventAction, EventCategory } from '../services/analyticsService';
 
 const Contacts = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -19,6 +21,7 @@ const Contacts = () => {
         await userService.createUser({ name: null, email, preferences: userService.makePreferences(InterestType.Subscribe) });
         setIsSubmitted(!isSubmitted);
         setIsSubmitting(false);
+        analytics.sendEvent(EventCategory.Conversion, EventAction.lead);
     };
 
     let buttonContent = 'Получить предложение';
@@ -40,7 +43,7 @@ const Contacts = () => {
                             <span className="phone">+7 (991) 777-32-88</span>
                             <span className="online">Сейчас работаем</span>
                         </div>
-                        <a className="callback-button" href="#callback">Перезвоните мне</a>
+                        <a className="callback-button" href="#callback" onClick={() => analytics.sendEvent(EventCategory.LeadButton, EventAction.callback)}>Перезвоните мне</a>
                     </div>
                     <form className="subscribe-form" onSubmit={handleSubmit}>
                         <input id="email-input" type="email" placeholder="E-mail" value={email} required onChange={handleEmailChange}></input>

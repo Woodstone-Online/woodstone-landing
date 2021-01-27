@@ -14,25 +14,30 @@ import CallbackModal from '../components/CallbackModal';
 import ShowhouseModal from '../components/ShowhouseModal';
 import PartnersModal from '../components/PartnersModal';
 import OfficeModal from '../components/OfficeModal';
+import * as analytics from '../services/analyticsService';
 
-const Landing = () => (
-    <Fragment>
-        <Header />
-        <Main />
-        <Substrate />
-        <Services />
-        <CottageVillages />
-        <HousesTitle />
-        <HousesGallery />
-        <Technologies />
-        <Partners />
-        <Contacts />
-        <Footer />
-        <CallbackModal />
-        <ShowhouseModal />
-        <PartnersModal />
-        <OfficeModal />
-    </Fragment>
-);
+const Landing = () => {
+    analytics.setPage('landing');
+    analytics.sendPageview();
+    return  (
+        <Fragment>
+            <Header />
+            <Main />
+            <Substrate />
+            <Services />
+            <CottageVillages />
+            <HousesTitle />
+            <HousesGallery />
+            <Technologies />
+            <Partners />
+            <Contacts />
+            <Footer />
+            <CallbackModal />
+            <ShowhouseModal />
+            <PartnersModal />
+            <OfficeModal />
+        </Fragment>
+    )
+};
 
 export default Landing;

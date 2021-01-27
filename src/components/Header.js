@@ -7,6 +7,8 @@ import dropdown from '../images/dropdown.svg';
 import briefcase from '../images/briefcase.svg';
 import DropDownMenu from './common/DropDownMenu';
 import DropDownRegions from './common/DropDownRegions';
+import * as analytics from '../services/analyticsService';
+import { EventAction, EventCategory } from '../services/analyticsService';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,7 +73,7 @@ const Header = () => {
                                 <span className="information-title location-title">Екатеринбург</span>
                                 <img className={getRegionsCSSClass()} src={dropdown} alt=""></img>
                             </div>
-                            <a className="information-link" href="#partnership">
+                            <a className="information-link" href="#partnership" onClick={() => analytics.sendEvent(EventCategory.LeadButton, EventAction.partnership)}>
                                 <div className="partners">
                                         <img className="information-icon" src={briefcase} alt=""></img>
                                         <span className="information-title">Партнерам</span>
@@ -89,7 +91,7 @@ const Header = () => {
                                 <span className="number">+7 (991) 777-32-88</span>
                                 <div className="label"><span className="label-text">Сейчас работаем</span></div>
                             </div>
-                            <a className="callback-button" href="#callback">Перезвоните мне</a>
+                            <a className="callback-button" href="#callback" onClick={() => analytics.sendEvent(EventCategory.LeadButton, EventAction.callback)}>Перезвоните мне</a>
                         </div>
                     </div>
                     <DropDownRegions isOpen={isRegionsBlockOpen} />
