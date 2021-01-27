@@ -29,10 +29,10 @@ const CottageVillages = () => (
                             <div className="cv-item">
                                 <div className="cv-text-block">
                                     <h3 className="cv-title">Лисьи Горки</h3>
-                                    <p className="cv-description">36 км от Екатеринбурга</p>
+                                    <p className="cv-description">35 км от Екатеринбурга</p>
                                 </div>
                                 <div className="cv-remoteness-block">
-                                    <span className="minutes">36 км</span>
+                                    <span className="minutes">35 км</span>
                                     <span className="area">Тюменский тракт</span>
                                 </div>
                                 <div className="cv-icons-block">
@@ -44,41 +44,44 @@ const CottageVillages = () => (
                             </div>
                             <div className="cv-item">
                                 <div className="cv-text-block">
-                                    <h3 className="cv-title">Гагарский ключ</h3>
-                                    <p className="cv-description">42 км от Екатеринбурга</p>
+                                    <h3 className="cv-title">Ромашкино</h3>
+                                    <p className="cv-description">13 км от Екатеринбурга</p>
                                 </div>
                                 <div className="cv-remoteness-block">
-                                    <span className="minutes">42 км</span>
+                                    <span className="minutes">13 км</span>
                                     <span className="area">Полевской тракт</span>
                                 </div>
                                 <div className="cv-icons-block">
                                     <img className="cv-icon" src={shield} alt=""></img>
                                     <img className="cv-icon" src={lightning} alt=""></img>
                                     <img className="cv-icon" src={drop} alt=""></img>
+                                    <img className="cv-icon" src={fire} alt=""></img>
                                 </div>
                             </div>
                             <div className="cv-item">
                                 <div className="cv-text-block">
                                     <h3 className="cv-title">Чистые росы 2</h3>
-                                    <p className="cv-description">71 км от Екатеринбурга</p>
+                                    <p className="cv-description">22 км от Екатеринбурга</p>
                                 </div>
                                 <div className="cv-remoteness-block">
-                                    <span className="minutes">71 км</span>
-                                    <span className="area">Челябинский тракт</span>
+                                    <span className="minutes">22 км</span>
+                                    <span className="area">Тюменский тракт</span>
                                 </div>
                                 <div className="cv-icons-block">
                                     <img className="cv-icon" src={shield} alt=""></img>
                                     <img className="cv-icon" src={lightning} alt=""></img>
+                                    <img className="cv-icon" src={drop} alt=""></img>
+                                    <img className="cv-icon" src={fire} alt=""></img>
                                 </div>
                             </div>
                             <div className="cv-item">
                                 <div className="cv-text-block">
-                                    <h3 className="cv-title">Расторгуевъ</h3>
-                                    <p className="cv-description">55 км от Екатеринбурга</p>
+                                    <h3 className="cv-title">Заповедник</h3>
+                                    <p className="cv-description">35 км от Екатеринбурга</p>
                                 </div>
                                 <div className="cv-remoteness-block">
-                                    <span className="minutes">55 км</span>
-                                    <span className="area">Тюменский тракт</span>
+                                    <span className="minutes">35 км</span>
+                                    <span className="area">Челябинский тракт</span>
                                 </div>
                                 <div className="cv-icons-block">
                                     <img className="cv-icon" src={shield} alt=""></img>
