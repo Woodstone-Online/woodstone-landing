@@ -15,10 +15,12 @@ import ShowhouseModal from '../components/ShowhouseModal';
 import PartnersModal from '../components/PartnersModal';
 import OfficeModal from '../components/OfficeModal';
 import * as analytics from '../services/analyticsService';
+import * as facebookPixel from '../services/facebookPixelService';
 
 const Landing = () => {
     analytics.setPage('landing');
     analytics.sendPageview();
+    facebookPixel.sendPageview();
     return  (
         <Fragment>
             <Header />
