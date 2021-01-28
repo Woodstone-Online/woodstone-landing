@@ -1,5 +1,3 @@
-export const APP_ENDPOINT = 'https://app.woodstone.online';
-
 export const InterestType = {
     Showcase: 4,
     PDF: 5,

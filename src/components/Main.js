@@ -3,7 +3,7 @@ import '../styles/Main.scss';
 import minus from '../images/minus.svg';
 import plus from '../images/plus.svg';
 import { numberFormatter } from '../utils/numbers';
-import { APP_ENDPOINT } from '../constants';
+import { CONFIG } from '../config';
 import * as analytics from '../services/analyticsService';
 import { EventAction, EventCategory } from '../services/analyticsService';
 
@@ -19,7 +19,6 @@ const Main = () => {
     const [budget, setBudget] = useState(MIN_BUDGET);
 
     const handleBudgetChange = (event) => {
-        console.log('handleBudgetChange', event)
         setBudget(event.target.value);
     };
 
@@ -39,7 +38,7 @@ const Main = () => {
 
     const makeBudgetText = () => budget < MAX_BUDGET ? `${numberFormatter.format(budget)} ₽` : 'Не важно';
 
-    const makeAppLink = () => `${APP_ENDPOINT}?adults=${adults}&children=${children}&budget=${budget}`;
+    const makeAppLink = () => `${CONFIG.serviceUrl}?adults=${adults}&children=${children}&budget=${budget === MIN_BUDGET ? MAX_BUDGET : budget}`;
 
     return (
         <div className="main-section">
@@ -107,6 +106,7 @@ const Main = () => {
                         </div>
                         <a className="start-button" href={makeAppLink()} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.getStarted)}>Начать загородную жизнь</a>
                     </div>
+                    <p id="bg-alt">КП Заповедник, VILLA 66</p>
                 </div>
             </div>
         </div>

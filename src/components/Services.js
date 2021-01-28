@@ -3,7 +3,7 @@ import family from '../images/family.png';
 import exchange from '../images/flat-to-house.png';
 import entrepreneur from '../images/entrepreneur.png';
 import construction from '../images/construction.png';
-import { APP_ENDPOINT } from '../constants';
+import { CONFIG } from '../config';
 import * as analytics from '../services/analyticsService';
 import { EventAction, EventCategory } from '../services/analyticsService';
 
@@ -13,7 +13,7 @@ const Services = () => (
         <div className="wrapper">
             <h2 className="section-title">Рекомендуемые продукты</h2>
             <div className="services-list">
-                <a href={APP_ENDPOINT} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.serviceMortgage)}>
+                <a href={CONFIG.serviceUrl} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.serviceMortgage)}>
                     <div className="services-item">
                         <img className="service-image" src={family} alt=""></img>
                         <div className="service-texts-block">
@@ -22,7 +22,7 @@ const Services = () => (
                         </div>
                     </div>
                 </a>
-                <a href={APP_ENDPOINT} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.serviceExchange)}>
+                <a href={CONFIG.serviceUrl} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.serviceExchange)}>
                     <div className="services-item">
                         <img className="service-image" src={exchange} alt=""></img>
                         <div className="service-texts-block">
@@ -31,7 +31,7 @@ const Services = () => (
                         </div>
                     </div>
                 </a>
-                <a href={APP_ENDPOINT} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.serviceBuilding)}>
+                <a href={CONFIG.serviceUrl} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.serviceBuilding)}>
                     <div className="services-item">
                         <img className="service-image" src={construction} alt=""></img>
                         <div className="service-texts-block">
@@ -40,7 +40,7 @@ const Services = () => (
                         </div>
                     </div>
                 </a>
-                <a href={APP_ENDPOINT} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.serviceBusiness)}>
+                <a href={CONFIG.serviceUrl} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.serviceBusiness)}>
                     <div className="services-item">
                         <img className="service-image" src={entrepreneur} alt=""></img>
                         <div className="service-texts-block">

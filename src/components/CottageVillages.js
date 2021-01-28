@@ -3,7 +3,7 @@ import shield from '../images/shield.svg';
 import lightning from '../images/lightning.svg';
 import drop from '../images/drop.svg';
 import fire from '../images/fire.svg';
-import { APP_ENDPOINT } from '../constants';
+import { CONFIG } from '../config';
 import * as analytics from '../services/analyticsService';
 import { EventAction, EventCategory } from '../services/analyticsService';
 
@@ -92,7 +92,7 @@ const CottageVillages = () => (
                             </div>
                         </div>
                         <div className="cv-see-more-block">
-                            <a className="cv-see-more-button" href={APP_ENDPOINT} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.viewCottageVillages)}>Посмотреть все</a>
+                            <a className="cv-see-more-button" href={CONFIG.serviceUrl} onClick={() => analytics.sendEvent(EventCategory.StartButton, EventAction.viewCottageVillages)}>Посмотреть все</a>
                             <span className="cv-see-more-text">Более 80 поселков</span>
                         </div>
                     </div>
