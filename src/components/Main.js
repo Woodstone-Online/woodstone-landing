@@ -19,7 +19,7 @@ const Main = () => {
     const [budget, setBudget] = useState(MIN_BUDGET);
 
     const handleBudgetChange = (event) => {
-        setBudget(event.target.value);
+        setBudget(Number(event.target.value));
     };
 
     const changeAdultsValue = (value) => {
