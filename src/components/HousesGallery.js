@@ -12,7 +12,7 @@ import picture8 from '../images/housef-8.png';
 const HousesGallery = () => (
     <div className="gallery-section">
         <ScrollContainer className="houses-gallery">
-            {[picture1, picture2, picture3, picture5, picture4, picture6, picture7, picture8].map((picture, idx) => (
+            {[picture8, picture2, picture3, picture5, picture4, picture6, picture7, picture1].map((picture, idx) => (
                 <div className="gallery-item">
                     <img key={idx} src={picture} className="picture" alt="" />
                 </div>
