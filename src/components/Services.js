@@ -18,7 +18,7 @@ const Services = () => (
                         <img className="service-image" src={family} alt=""></img>
                         <div className="service-texts-block">
                             <h3 className="service-title">Загородный дом<br></br>в ипотеку от 2,7%</h3>
-                            <p className="service-description">Для строительства достаточно внести всего 20% стоимости — оплачивате остальные 80% по ипотеке уже после преезда</p>
+                            <p className="service-description">Для строительства достаточно внести всего 20% стоимости — оплачивате остальные 80% по ипотеке уже после переезда</p>
                         </div>
                     </div>
                 </a>
@@ -45,7 +45,7 @@ const Services = () => (
                         <img className="service-image" src={entrepreneur} alt=""></img>
                         <div className="service-texts-block">
                             <h3 className="service-title">Дом для предпринимателей в лизинг от 15,5%</h3>
-                            <p className="service-description">Программа приобритения загороной недвижимости для владельцев юридических лиц</p>
+                            <p className="service-description">Программа приобретения загородной недвижимости для владельцев юридических лиц</p>
                         </div>
                     </div>
                 </a>
